@@ -1,0 +1,155 @@
+body {
+    background-color: eggshell;
+}
+
+
+.boxtest
+{
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    border: 10px solid navy;
+    padding: 20px;
+    margin: 30px;
+    box-sizing: content-box;
+    
+}
+
+.boxtest2
+{
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    border: 10px solid green;
+    padding: 20px;
+    margin: 30px;
+    box-sizing: content-box;
+    outline: 5px solid red;
+    outline-offset: 10px;
+    
+}
+
+.boxtest3 {
+    font-size: 20px;
+    text-shadow: 2px 2px 5px red;
+    color: rgba(0,0,0,0);
+}
+
+.boxtest4 {
+    border: 4px solid purple;
+    display: inline-block;
+    min-width: 450px;
+    max-width: 500px;
+    box-sizing: content-box
+}
+
+.relative-box {
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+.absolute-parent {
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    position: relative;
+}
+
+.absolute-box {
+    position: absolute;
+    border: 3px solid red;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    background: blue;
+
+}
+
+.fixed-box {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.sticky-test1 {
+    background-color: red;
+    color: white;
+}
+
+.sticky-box1 {
+    position: sticky;
+    background-color: #f5f5f5;
+    color: black;
+    border-bottom: 2px solid #ccc;
+    top: 0;
+    padding: 20px;
+}
+
+.sticky-test2 {
+    background-color: blue;
+    color: white;
+}
+
+.sticky-box2 {
+    position: sticky;
+    background-color: #f5f5f5;
+    color: black;
+    border-bottom: 2px solid #ccc;
+    top: 0;
+    padding: 20px;
+}
+
+.scrolling-box {
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    overflow: auto;
+}
+
+.centering-block {
+    border: 4px solid blue;
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+}
+
+#parent > .box7 {
+    height: 20px;
+    border: 1px solid blue;
+}
+
+#parent .box7 + .box7 {
+    background-color: red;
+}
+
+#parent .box7 ~ .box7 {
+    background-color: black;
+}
+
+.box8 {
+    height: 20px;
+    border: 1px solid blue;
+    color: white;
+}
+.box8:not(.dontselectme) {
+    background-color: blue;
+}
+.box8:hover {
+    background-color: red;
+}
+
+.box8:nth-child(6) {
+    background-color: green;
+    color: black;
+}
+
