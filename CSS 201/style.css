@@ -1,0 +1,301 @@
+body {
+    background-color: eggshell;
+}
+
+
+.boxtest
+{
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    border: 10px solid navy;
+    padding: 20px;
+    margin: 30px;
+    box-sizing: content-box;
+    
+}
+
+.boxtest2
+{
+    width: 200px;
+    height: 200px;
+    background-color: lightgreen;
+    border: 10px solid green;
+    padding: 20px;
+    margin: 30px;
+    box-sizing: content-box;
+    outline: 5px solid red;
+    outline-offset: 10px;
+    
+}
+
+.boxtest3 {
+    font-size: 20px;
+    text-shadow: 2px 2px 5px red;
+    color: rgba(0,0,0,0);
+}
+
+.boxtest4 {
+    border: 4px solid purple;
+    display: inline-block;
+    min-width: 450px;
+    max-width: 500px;
+    box-sizing: content-box
+}
+
+.relative-box {
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+.absolute-parent {
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    position: relative;
+}
+
+.absolute-box {
+    position: absolute;
+    border: 3px solid red;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    background: blue;
+
+}
+
+.fixed-box {
+    width: 100px;
+    height: 100px;
+    background: orange;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.sticky-test1 {
+    background-color: red;
+    color: white;
+}
+
+.sticky-box1 {
+    position: sticky;
+    background-color: #f5f5f5;
+    color: black;
+    border-bottom: 2px solid #ccc;
+    top: 0;
+    padding: 20px;
+}
+
+.sticky-test2 {
+    background-color: blue;
+    color: white;
+}
+
+.sticky-box2 {
+    position: sticky;
+    background-color: #f5f5f5;
+    color: black;
+    border-bottom: 2px solid #ccc;
+    top: 0;
+    padding: 20px;
+}
+
+.scrolling-box {
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    overflow: auto;
+}
+
+.centering-block {
+    border: 4px solid blue;
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+}
+
+#parent > .box7 {
+    height: 20px;
+    border: 1px solid blue;
+}
+
+#parent .box7 + .box7 {
+    background-color: red;
+}
+
+#parent .box7 ~ .box7 {
+    background-color: black;
+}
+
+.box8 {
+    height: 20px;
+    border: 1px solid blue;
+    color: white;
+}
+.box8:not(.dontselectme) {
+    background-color: blue;
+}
+.box8:hover {
+    background-color: red;
+}
+
+.box8:nth-child(6) {
+    background-color: green;
+    color: black;
+}
+
+.box9 {
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    margin: 50px auto;
+    position: relative;
+    background-color: black;
+}
+
+.box9::before {
+    content: " ";
+    display: block;
+    border: 10px solid red;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    z-index: -1; /*layers behind the box9 element */
+}
+
+.box9::after {
+    content: " ";
+    display: block;
+    border: 10px solid blue;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    z-index: 1; /*layers behind the box9 element */
+}
+
+.link1 {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.link1::before {
+    content: " ";
+    width: 100%;
+    height: 4px;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.link1:hover::before {
+    height: 14px;
+}
+.para1::first-letter {
+    font-size: 50px; /* makes the first letter larger */
+    float: left; /* makes the first letter drop down */
+    margin: 5px; /* adds some space around the letter */
+}
+
+.para1::first-line {
+    font-weight: bold; /* makes the first line bold, and its always the first line depending on browser size */
+    
+}
+
+.para2::selection {
+    background-color: yellow; /* changes the background color of the selected text */
+    color: green; /* changes the text color of the selected text */
+}
+
+.button2 {
+    background-color: #fff;
+    display: inline-block;
+    padding: 5px 15px;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
+    transition: background-color 0.5s, /* smooth transition for hover effects */
+    color 0.5s ease, /* smooth transition for hover effects */
+    padding 0.5s ease; /* smooth transition for hover effects */
+}
+
+.button2:hover {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.gradient1 {
+    background-image: linear-gradient(90deg, black, yellow); /* horizontal gradient from black to yellow */
+    /* use tools like www.cssgradient.io to create gradients */
+    height: 500px;
+    width: 100%;
+}
+
+.gradient2 {
+    height: 500px; 
+    width: 100%; 
+    
+    background-image: linear-gradient(180deg, /* 180deg means vertical gradient */
+                            rgba(0,0,0,0.3) 0%, /* vertical gradient from transparent to black */
+                            rgba(0,0,0,0.8) 100%), /* vertical gradient from transparent to black */
+                         url(https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); /* image from unsplash.com */
+    background-size: cover; /* cover the entire div */
+    background-position: center; /* center the image */
+    color: white;
+    font-size: 90px;
+    text-align: center;
+    padding-top: 200px; /* push the text down */
+}
+
+.box11 {
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    margin: 50px auto;
+    /*transform: translate(100px, 100px); /* moves the box 100px to the right and 100px down */
+    /*transform: rotate(15deg); /* rotates the box 15 degrees */
+    /*transform: scale(1.5); /* scales the box to 1.5 times its original size */
+    /*transform: skew(20deg, 10deg); /* skews the box 20 degrees horizontally and 10 degrees vertically */
+
+}
+
+.box12 {
+    width: 300px;
+    height: 300px;
+    border: 10px solid black;
+    margin: 50px auto;
+    border-radius: 50%; /* makes the box a circle */
+    position: absolute;
+    left: 0%;
+    animation-name: slideMe; 
+    animation-duration: 4s; /* duration of the animation */
+    animation-iteration-count: infinite; /* makes the animation repeat forever */
+    animation-direction: alternate; /* makes the animation reverse direction each time it repeats */
+    
+}
+
+@keyframes slideMe {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 100%;
+    }
+}

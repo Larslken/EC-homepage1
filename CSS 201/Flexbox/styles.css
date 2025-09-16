@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+#container1 {
+    display: flex;
+    flex-wrap: wrap; /* This allows the items to wrap to the next line if they exceed the container's width */
+    width: 100%;
+}
+
+#container1 > div {
+    border: 2px solid black;
+    
+    flex-basis: 20%; /* This makes the divs take up 50% of the container each */
+    flex-shrink: 0; /* Prevents the divs from shrinking smaller than their content */
+    flex-grow: 0; /* Prevents the divs from growing larger than their basis */
+}
+
+#container2 {
+    display: flex; /* This makes the container a flex container */
+    flex-wrap: wrap; /* This allows the items to wrap to the next line if they exceed the container's width */
+}
+
+#container2 > div { /* This targets all direct child divs of #container2 */
+    border: 1px solid red; /* Just to visualize the divs */
+}
+
+.navigation {
+    flex-basis: 20%;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+.content {
+    flex-basis: 80%; 
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.header {
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: #f5f5f5;
+    color: black;
+    border-bottom: 2px solid black;
+    padding: 20px;
+}

@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+#grid1 {
+    display: grid;
+    grid-template-columns: auto auto auto; /* This creates three equal-width columns */
+    grid-column-gap: 10px; /* This adds a 10px gap between columns */
+    grid-row-gap: 10px; /* This adds a 10px gap between rows */
+}
+
+#grid1 > div {
+    border: 1px solid red;
+}
+
+.box1 {
+    grid-column-start: 1; /* This makes the box start at the first column */
+    grid-column-end: 4; /* This makes the box end at the fourth column, spanning three columns */
+}
+
+.box6 {
+    grid-row-start: 2; /* This makes the box start at the second row */
+    grid-row-end: 4; /* This makes the box end at the fourth row, spanning two rows */
+}
+
+.box4, .box5 {
+    grid-column-start: 2;
+    grid-column-end: 4; /* This makes the box span two columns */
+}
+
+.box7 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
